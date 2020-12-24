@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Ahoy.cf</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body style="font-family: 'Noto Sans KR', sans-serif;">
+    <section class="text-center" style="background: #1C313A;height: 300px;">
+        <div style="height: 90px;"></div>
+        <h1 style="color: rgb(255,255,255);font-family: 'Noto Sans KR', sans-serif; font-weight: 100;">Ahoy.cf</h1>
+        <h6 style="color: rgb(255,255,255);font-family: 'Noto Sans KR', sans-serif; font-weight: 100;">Simple Url Shortener</h6>
+    </section>
+    <div class="container" style="margin-top: -30px;">
+        <div class="row">
+            <div class="col" style="background: #ffffff;box-shadow: 0px 0px 20px rgb(173,173,173);padding-bottom: 13px;border-radius: 5px;">
+                <form action="./" accept-charset="utf-8" method="post" onsubmit="this.submit(); this.reset();  $('.loader').attr('hidden', false); return false;">
+                    <div class="input-group mb-2" style="height: 50px;margin-top: 1px;">
+                        <input type="url" required id="txtUrl" name="url" class="form-control" style="margin-top: 10px;margin-bottom: 10px;" placeholder="줄일 URL을 입력해 주세요.">
+                        <div class="input-group-append"><input class="btn btn-dark" id="btnSubmit" type="submit" style="height: 38px;margin-top: 10px;font-family: 'Noto Sans KR', sans-serif;font-weight: 100;" /></div>
+                    </div>
+                    <a data-toggle="collapse" href="#collapseSettings" aria-expanded="false" aria-controls="collapseSettings" style="color: var(--dark);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-caret-down-fill">
+                            <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"></path>
+                        </svg>고급 설정
+                    </a>
+                    <div id="collapseSettings" class="mt-1 collapse">
+                        <div class="card card-block" style="padding: 15px;">
+                            <div class="form-check mb-1"><input class="form-check-input" type="checkbox" id="chkPass"><label class="form-check-label" for="txtPass">비밀번호 사용하기</label></div><input type="password" class="form-control" name="password" placeholder="비밀번호를 입력하여 주세요." id="txtPass" disabled="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="loader loader-default is-active" hidden="hidden"></div>
+    <p class="text-center w-100 mb-0" style="position : fixed; bottom:0;">Made with&nbsp;♥&nbsp;by Kate Lin<br></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $("#chkPass").change(function () {
+            if (this.checked) {
+                $("#txtPass").attr('required', true);
+                $("#txtPass").attr('disabled', false);
+            }
+            else {
+                $("#txtPass").attr('required', false);
+                $("#txtPass").attr('disabled', true);
+            }
+        });
+    </script>
+</body>
+</html>

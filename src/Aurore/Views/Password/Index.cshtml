@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Ahoy.cf - @ViewBag.Id</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body style="font-family: 'Noto Sans KR', sans-serif; font-weight: 100;">
+    <section class="text-center" style="background: #1C313A;height: 300px;">
+        <div style="height: 90px;"></div>
+        <h1 style="color: rgb(255,255,255);font-family: 'Noto Sans KR', sans-serif; font-weight: 100;">비밀번호가 걸려있는 URL 입니다.</h1>
+        <h6 style="color: rgb(255,255,255);font-family: 'Noto Sans KR', sans-serif; font-weight: 100;">비밀번호를 입력하여 주세요.</h6>
+    </section>
+    <div class="container" style="margin-top: -30px;">
+        <div class="row">
+            <div class="col text-right" style="background: #ffffff;box-shadow: 0px 0px 20px rgb(173,173,173);padding-bottom: 13px;border-radius: 5px;">
+                <form action="" accept-charset="utf-8" method="post" onsubmit="this.submit(); this.reset();  $('.loader').attr('hidden', false); return false;">
+                    <input type="password" class="form-control" placeholder="비밀번호를 입력하여 주세요." name="password" required style="margin-top: 10px;font-family: 'Noto Sans KR', sans-serif; font-weight: 100;">
+                    <input class="btn btn-dark mt-2" type="submit" style="font-family: 'Noto Sans KR', sans-serif;font-weight: 100;" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="loader loader-default is-active" hidden="hidden"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
